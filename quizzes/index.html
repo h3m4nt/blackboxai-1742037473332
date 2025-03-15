@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quizzes - FreeJobAlert</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-blue-600 text-white shadow-lg">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex items-center justify-between">
+                <a href="../index.html" class="flex items-center">
+                    <img src="../assets/images/logo.svg" alt="FreeJobAlert Logo" class="h-12 w-auto mr-3">
+                    <div>
+                        <h1 class="text-2xl font-bold">FreeJobAlert.Com</h1>
+                        <p class="text-sm">Quiz Platform</p>
+                    </div>
+                </a>
+                <div class="flex items-center space-x-4">
+                    <span class="flex items-center">
+                        <i class="fas fa-coins text-yellow-400 mr-2"></i>
+                        <span id="coinBalance">500</span> coins
+                    </span>
+                    <div class="relative">
+                        <button id="userMenuBtn" class="flex items-center space-x-2 bg-blue-700 px-4 py-2 rounded-lg hover:bg-blue-800 transition">
+                            <i class="fas fa-user-circle"></i>
+                            <span>My Account</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+        <!-- Quiz Categories -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Free Quizzes -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <div class="bg-green-500 text-white p-4">
+                    <h2 class="text-xl font-semibold">Free Quizzes</h2>
+                    <p class="text-sm">Practice with our free quiz collection</p>
+                </div>
+                <div class="p-6">
+                    <ul class="space-y-4">
+                        <li>
+                            <a href="take-quiz.html?type=free&id=1" class="block bg-gray-50 p-4 rounded-lg hover:bg-gray-100 transition">
+                                <h3 class="font-semibold">Basic General Knowledge</h3>
+                                <p class="text-sm text-gray-600">20 questions • 20 minutes</p>
+                                <div class="mt-2 flex items-center text-green-500">
+                                    <i class="fas fa-unlock mr-2"></i>
+                                    <span>Free</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="take-quiz.html?type=free&id=2" class="block bg-gray-50 p-4 rounded-lg hover:bg-gray-100 transition">
+                                <h3 class="font-semibold">Current Affairs (Basic)</h3>
+                                <p class="text-sm text-gray-600">15 questions • 15 minutes</p>
+                                <div class="mt-2 flex items-center text-green-500">
+                                    <i class="fas fa-unlock mr-2"></i>
+                                    <span>Free</span>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Premium Quizzes -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <div class="bg-purple-500 text-white p-4">
+                    <h2 class="text-xl font-semibold">Premium Quizzes</h2>
+                    <p class="text-sm">Advanced practice for serious preparation</p>
+                </div>
+                <div class="p-6">
+                    <ul class="space-y-4">
+                        <li>
+                            <a href="#" class="block bg-gray-50 p-4 rounded-lg hover:bg-gray-100 transition">
+                                <h3 class="font-semibold">Advanced General Knowledge</h3>
+                                <p class="text-sm text-gray-600">50 questions • 50 minutes</p>
+                                <div class="mt-2 flex items-center text-purple-500">
+                                    <i class="fas fa-coins mr-2"></i>
+                                    <span>100 coins</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="block bg-gray-50 p-4 rounded-lg hover:bg-gray-100 transition">
+                                <h3 class="font-semibold">Current Affairs (Advanced)</h3>
+                                <p class="text-sm text-gray-600">40 questions • 40 minutes</p>
+                                <div class="mt-2 flex items-center text-purple-500">
+                                    <i class="fas fa-coins mr-2"></i>
+                                    <span>150 coins</span>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Mock Tests -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <div class="bg-blue-500 text-white p-4">
+                    <h2 class="text-xl font-semibold">Mock Tests</h2>
+                    <p class="text-sm">Full-length practice tests</p>
+                </div>
+                <div class="p-6">
+                    <ul class="space-y-4">
+                        <li>
+                            <a href="#" class="block bg-gray-50 p-4 rounded-lg hover:bg-gray-100 transition">
+                                <h3 class="font-semibold">SSC Mock Test</h3>
+                                <p class="text-sm text-gray-600">100 questions • 2 hours</p>
+                                <div class="mt-2 flex items-center text-blue-500">
+                                    <i class="fas fa-coins mr-2"></i>
+                                    <span>200 coins</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="block bg-gray-50 p-4 rounded-lg hover:bg-gray-100 transition">
+                                <h3 class="font-semibold">Bank PO Mock Test</h3>
+                                <p class="text-sm text-gray-600">120 questions • 2.5 hours</p>
+                                <div class="mt-2 flex items-center text-blue-500">
+                                    <i class="fas fa-coins mr-2"></i>
+                                    <span>250 coins</span>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quiz Packages -->
+        <div class="mt-12">
+            <h2 class="text-2xl font-semibold mb-6">Quiz Packages</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Basic Package -->
+                <div class="bg-white rounded-lg shadow-lg p-6 border-t-4 border-blue-500">
+                    <h3 class="text-xl font-semibold mb-2">Basic Package</h3>
+                    <div class="text-3xl font-bold text-blue-500 mb-4">
+                        <i class="fas fa-coins mr-2"></i>100 coins
+                    </div>
+                    <ul class="space-y-3 mb-6">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>10 Premium Quizzes</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>Basic Performance Analytics</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>Valid for 1 month</span>
+                        </li>
+                    </ul>
+                    <button class="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition">
+                        Purchase Package
+                    </button>
+                </div>
+
+                <!-- Premium Package -->
+                <div class="bg-white rounded-lg shadow-lg p-6 border-t-4 border-purple-500 transform scale-105">
+                    <div class="absolute top-0 right-0 bg-purple-500 text-white px-3 py-1 rounded-bl-lg text-sm">
+                        Popular
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Premium Package</h3>
+                    <div class="text-3xl font-bold text-purple-500 mb-4">
+                        <i class="fas fa-coins mr-2"></i>300 coins
+                    </div>
+                    <ul class="space-y-3 mb-6">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>30 Premium Quizzes</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>5 Mock Tests</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>Detailed Analytics</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>Valid for 3 months</span>
+                        </li>
+                    </ul>
+                    <button class="w-full bg-purple-500 text-white py-2 rounded-lg hover:bg-purple-600 transition">
+                        Purchase Package
+                    </button>
+                </div>
+
+                <!-- Pro Package -->
+                <div class="bg-white rounded-lg shadow-lg p-6 border-t-4 border-gold-500">
+                    <h3 class="text-xl font-semibold mb-2">Pro Package</h3>
+                    <div class="text-3xl font-bold text-yellow-500 mb-4">
+                        <i class="fas fa-coins mr-2"></i>500 coins
+                    </div>
+                    <ul class="space-y-3 mb-6">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>Unlimited Premium Quizzes</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>Unlimited Mock Tests</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>Advanced Analytics</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>Personal Progress Tracking</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>Valid for 1 year</span>
+                        </li>
+                    </ul>
+                    <button class="w-full bg-yellow-500 text-white py-2 rounded-lg hover:bg-yellow-600 transition">
+                        Purchase Package
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Referral Program -->
+        <div class="mt-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg shadow-lg text-white p-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div>
+                    <h2 class="text-2xl font-semibold mb-4">Refer & Earn Program</h2>
+                    <p class="mb-6">Invite your friends and earn rewards! Get 200 coins for each successful referral.</p>
+                    <div class="bg-white bg-opacity-20 p-4 rounded-lg mb-4">
+                        <p class="text-sm mb-2">Your Referral Code:</p>
+                        <div class="flex items-center space-x-2">
+                            <input type="text" value="FREEJOB123" class="bg-white text-gray-800 px-4 py-2 rounded flex-grow" readonly>
+                            <button class="bg-white text-blue-500 px-4 py-2 rounded hover:bg-gray-100 transition">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <button class="bg-white text-blue-500 px-6 py-2 rounded-lg hover:bg-gray-100 transition">
+                        <i class="fas fa-share-alt mr-2"></i>Share Now
+                    </button>
+                </div>
+                <div class="text-center">
+                    <div class="bg-white bg-opacity-20 rounded-lg p-6">
+                        <div class="text-4xl font-bold mb-2">200</div>
+                        <p class="text-xl mb-4">Coins per Referral</p>
+                        <ul class="text-left space-y-2">
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle mr-2"></i>
+                                <span>Friend signs up using your code</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle mr-2"></i>
+                                <span>You get 200 coins</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle mr-2"></i>
+                                <span>Friend gets 100 bonus coins</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8 mt-12">
+        <div class="container mx-auto px-4">
+            <div class="text-center">
+                <p>&copy; 2024 FreeJobAlert.Com Quiz Platform. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Add your JavaScript here
+    </script>
+</body>
+</html>
